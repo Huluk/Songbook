@@ -34,6 +34,7 @@
 \usepackage{setspace} % manipulate line spacing
 
 \usepackage{subfiles}
+\usepackage{paracol}
 
 \usepackage{nth} % autocompletes "1" to "1st" and so on (used for capo fret numbers)
 
@@ -51,7 +52,7 @@
 % hide page numbers (for printed ring-binder-version)
 %\pagenumbering{gobble}
 
-% remove indent at start of paragraph 
+% remove indent at start of paragraph
 \setlength\parindent{0pt}
 
 % contour setup (for tab lines)
@@ -137,9 +138,13 @@
 \newcommand{\isNSFWallowed}{1}	% 1 if NSFW is allowed, 0 otherwise (i.e. G-rated (="jugendfrei"))
 \newcommand{\flagNSFW}[1]{\if\isNSFWallowed1 {#1} \fi}
 
+% Todo: Find a better solution for text repeat signs.
+\newcommand{\ltrepeat}{\textbar:~}
+\newcommand{\rtrepeat}{:\textbar}
+
 % ----------------------------- begin document -----------------------------
 \begin{document}
-	
+
 \include{./TeX_files/musixguitartab}
 \include{./TeX_files/chords}
 \include{./TeX_files/strummingpatterns}
@@ -310,6 +315,18 @@
 \include{./TeX_files/songs/mittelfinger-teamscheisse}
 \include{./TeX_files/songs/tanz-metusa}
 \include{./TeX_files/songs/weinweibundgesang-diestreuner}
+
+\section{Nur Text}
+\include{./TeX_files/songs/botenanna-gebroedersko}
+\include{./TeX_files/songs/brindisi-verdi}
+\include{./TeX_files/songs/fyllapaafjaellet-albatraoz}
+\include{./TeX_files/songs/haltdiefresse-oidorno}
+\include{./TeX_files/songs/hejsokoly-kandracovci}
+\include{./TeX_files/songs/internationalen-polyteknikkojenkuoro}
+\include{./TeX_files/songs/itsmylife-bonjovi}
+\include{./TeX_files/songs/ramundhinunge}
+\include{./TeX_files/songs/santiano-santiano}
+\include{./TeX_files/songs/soerkansaellit-polyteknikkojenkuoro}
 
 \include{./TeX_files/guitarchordtable}
 \include{./TeX_files/ukulelechordtable}
