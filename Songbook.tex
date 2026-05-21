@@ -139,16 +139,20 @@
 
 % ----------------------------- begin document -----------------------------
 \begin{document}
-	
 \include{./TeX_files/musixguitartab}
 \include{./TeX_files/chords}
 \include{./TeX_files/strummingpatterns}
+
+
+\pagenumbering{gobble}
+\include{./TeX_files/cover_page}
+\pagenumbering{arabic}
+
 
 \hypertarget{tableofcontents}{}
 \tableofcontents
 
 %%%\subfile{./TeX_files/test.tex}
-
 %\include{./TeX_files/songs/styleguide-maintenance}
 \flagNSFW{\include{./TeX_files/songs/3tagebart-dieaerzte}}
 \include{./TeX_files/songs/alamierda-skap}
