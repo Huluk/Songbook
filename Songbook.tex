@@ -98,10 +98,10 @@
 \newdimen\highlightbarheight
 \newdimen\highlightbardepth
 
-\newenvironment{highlightbar}{\begin{_highlightbar}[3pt]}{\end{_highlightbar}}
-\newenvironment{slimhighlightbar}{\begin{_highlightbar}[1pt]}{\end{_highlightbar}}
+\newenvironment{highlightbar}{\begin{_highlightbar}[3pt][lightgray]}{\end{_highlightbar}}
+\newenvironment{slimhighlightbar}{\begin{_highlightbar}[1pt][lightgray]}{\end{_highlightbar}}
 
-\DeclareDocumentEnvironment{_highlightbar}{O {3} }{%
+\DeclareDocumentEnvironment{_highlightbar}{O {3} O {lightgray} }{%
 	\setbox\highlightbarbox=\vbox\bgroup\hsize=\textwidth
 }{%
 	\vspace{-1em}%
@@ -110,7 +110,7 @@
 	\highlightbardepth=\dp\highlightbarbox%
 	\noindent\rlap{%
 		\hskip-7pt%
-		\textcolor{lightgray}{%
+		\textcolor{#2}{%
 			\vrule height \highlightbarheight depth \highlightbardepth width #1%
 		}
 	}%
@@ -211,6 +211,7 @@
 
 \flagNSFW{\include{./TeX_files/songs/nococklikehorsecock-peppercoyote}}
 \include{./TeX_files/songs/northwestpassage-stanrogers}
+\include{./TeX_files/songs/nothingelsematters-metallica}
 
 \include{./TeX_files/songs/paulesbeichtgang-versengold}
 \include{./TeX_files/songs/plukunelaflorojn-perditageneracio}
@@ -243,6 +244,7 @@
 \include{./TeX_files/songs/walpurgisnacht-schandmaul}
 \include{./TeX_files/songs/wellerman-traditional}
 
+\include{./TeX_files/songs/wakemeupwhenseptemberends-greenday}
 \include{./TeX_files/songs/wemuns-versengold}
 \include{./TeX_files/songs/westenwind-winner}
 \include{./TeX_files/songs/wirhabengrundzumfeiern-ottowaalkes}
